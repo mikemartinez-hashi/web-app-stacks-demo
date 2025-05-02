@@ -4,7 +4,7 @@ identity_token "aws" {
 
 upstream_input "security_groups" {
   type   = "stack"
-  source = "app.terraform.io/hashicorp/Mikes_sandbox/Terraform Stacks/sec-grp-stacks-demo"
+  source = "app.terraform.io/Mikes_sandbox/Terraform Stacks/sec-grp-stacks-demo"
 }
 
 deployment "dev" {
