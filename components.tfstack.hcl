@@ -5,13 +5,14 @@ component "web-server-app" {
   source = "./web-server-app"
 
   inputs = {
-    region        = each.value
-    environment   = var.environment
-    owner         = var.owner
-    instance_type = var.instance_type
-    key_name      = var.key_name
-    server        = var.server
-    demo          = var.demo
+    region          = each.value
+    environment     = var.environment
+    owner           = var.owner
+    instance_type   = var.instance_type
+    key_name        = var.key_name
+    server          = var.server
+    demo            = var.demo
+    security_groups = var.security_groups
   }
 
   providers = {

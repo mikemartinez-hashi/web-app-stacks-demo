@@ -23,10 +23,8 @@ resource "aws_instance" "web_server_app" {
   ami           = data.aws_ami.amazon_linux_2.id
   instance_type = var.instance_type
 
-  key_name = var.key_name
-  security_groups = [
-    aws_security_group.web_server_app_stacks_security_group_rules.name
-  ]
+  key_name        = var.key_name
+  security_groups = var.security_groups
 
   tags = {
     Name        = "${var.server}-${var.environment}"

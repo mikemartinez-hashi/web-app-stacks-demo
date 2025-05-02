@@ -43,6 +43,10 @@ variable "demo" {
   type = string
 }
 
+variable "security_groups" {
+  type = list(string)
+}
+
 # HCP configuration
 // variable "HCP_CLIENT_ID" {
 //   type        = string
