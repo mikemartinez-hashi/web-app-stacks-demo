@@ -21,7 +21,7 @@ deployment "dev" {
     demo           = "tf-stacks-demo-mike"
     security_groups = {
       // front_door_security_group_name = upstream_input.security_groups.front_door_security_group_name
-      access_security_group_name = upstream_input.security_groups.access_security_group_name
+      access_security_group_name = upstream_input.sec-grp-stacks-demo.access_security_group_name
     }
   }
 }
@@ -39,8 +39,8 @@ deployment "prod" {
     server         = "web-server-app-prod"
     demo           = "tf-stacks-demo-mike"
     security_groups = {
-      front_door_security_group_name = upstream_input.security_groups.front_door_security_group_name
-      access_security_group_name     = upstream_input.security_groups.access_security_group_name
+      front_door_security_group_name = upstream_input.sec-grp-stacks-demo.front_door_security_group_name
+      access_security_group_name     = upstream_input.sec-grp-stacks-demo.access_security_group_name
     }
   }
 }
