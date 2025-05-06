@@ -44,7 +44,7 @@ variable "demo" {
 }
 
 variable "front_door_security_group" {
-  type = list(string)
+  type = string
 }
 
 variable "access_security_group" {
