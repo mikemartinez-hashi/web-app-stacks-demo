@@ -8,7 +8,6 @@ upstream_input "security_groups" {
 }
 
 deployment "dev" {
-  for_each = var.regions
   inputs = {
     regions        = ["us-east-1"]
     role_arn       = "arn:aws:iam::970547352490:role/stacks-Mikes_sandbox-Terraform-Stacks"
@@ -22,13 +21,12 @@ deployment "dev" {
     demo           = "tf-stacks-demo-mike"
     // front_door_security_group = upstream_input.security_groups.front_door_security_group_name_dev
     // access_security_group     = upstream_input.security_groups.access_security_group_name_dev
-    front_door_security_group = upstream_input.security_groups.front_door_security_group_id_dev[each.value]
-    access_security_group     = upstream_input.security_groups.access_security_group_id_dev[each.value]
+    front_door_security_group = upstream_input.security_groups.front_door_security_group_id_dev
+    access_security_group     = upstream_input.security_groups.access_security_group_id_dev
   }
 }
 
 deployment "prod" {
-  for_each = var.regions
   inputs = {
     regions        = ["us-west-1", "us-east-1"]
     role_arn       = "arn:aws:iam::970547352490:role/stacks-Mikes_sandbox-Terraform-Stacks"

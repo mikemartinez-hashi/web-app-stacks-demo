@@ -12,7 +12,7 @@ component "web-server-app" {
     key_name                  = var.key_name
     server                    = var.server
     demo                      = var.demo
-    front_door_security_group = var.front_door_security_group
+    front_door_security_group = upstream_input.security_groups.front_door_security_group_id_dev[each.value]
     access_security_group     = var.access_security_group
     // security_group = var.security_group
   }
