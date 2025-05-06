@@ -8,6 +8,7 @@ upstream_input "security_groups" {
 }
 
 deployment "dev" {
+  for_each = var.regions
   inputs = {
     regions        = ["us-east-1"]
     role_arn       = "arn:aws:iam::970547352490:role/stacks-Mikes_sandbox-Terraform-Stacks"
@@ -27,6 +28,7 @@ deployment "dev" {
 }
 
 deployment "prod" {
+  for_each = var.regions
   inputs = {
     regions        = ["us-west-1", "us-east-1"]
     role_arn       = "arn:aws:iam::970547352490:role/stacks-Mikes_sandbox-Terraform-Stacks"
