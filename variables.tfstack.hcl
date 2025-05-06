@@ -48,7 +48,7 @@ variable "front_door_security_group" {
 }
 
 variable "access_security_group" {
-  type = list(string)
+  type = string
 }
 
 # HCP configuration
