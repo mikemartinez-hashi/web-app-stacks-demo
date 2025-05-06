@@ -14,7 +14,6 @@ component "web-server-app" {
     demo                      = var.demo
     front_door_security_group = var.front_door_security_group
     access_security_group     = var.access_security_group
-    // security_group = var.security_group
   }
 
   providers = {
