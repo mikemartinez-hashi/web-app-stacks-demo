@@ -43,8 +43,12 @@ variable "demo" {
   type = string
 }
 
-variable "security_groups" {
-  type = list(string)
+variable "front_door_security_group" {
+  type = string
+}
+
+variable "access_security_group" {
+  type = string
 }
 
 # HCP configuration
