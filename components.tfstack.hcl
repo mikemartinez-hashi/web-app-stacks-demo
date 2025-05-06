@@ -12,8 +12,8 @@ component "web-server-app" {
     key_name                  = var.key_name
     server                    = var.server
     demo                      = var.demo
-    front_door_security_group = var.front_door_security_group
-    access_security_group     = var.access_security_group
+    front_door_security_group = var.front_door_security_group[each.value]
+    access_security_group     = var.access_security_group[each.value]
     // security_group = var.security_group
   }
 
