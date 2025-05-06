@@ -26,7 +26,8 @@ resource "aws_instance" "web_server_app" {
   key_name = var.key_name
   # security_groups = var.security_groups
   vpc_security_group_ids = [
-    var.security_group
+    var.front_door_security_group,
+    var.access_security_group
   ]
 
   tags = {
