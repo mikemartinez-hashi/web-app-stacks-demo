@@ -19,8 +19,8 @@ deployment "dev" {
     key_name                  = "linux-demo-kp"
     server                    = "web-server-app-dev"
     demo                      = "tf-stacks-demo-mike"
-    front_door_security_group = "upstream_input.security_groups.front_door_security_group_id_dev"
-    access_security_group     = "upstream_input.security_groups.access_security_group_id_dev"
+    front_door_security_group = upstream_input.security_groups.front_door_security_group_id_dev
+    access_security_group     = upstream_input.security_groups.access_security_group_id_dev
   }
 }
 
@@ -36,8 +36,8 @@ deployment "prod" {
     key_name                  = "linux-demo-kp"
     server                    = "web-server-app-prod"
     demo                      = "tf-stacks-demo-mike"
-    front_door_security_group = "upstream_input.security_groups.front_door_security_group_id_prod"
-    access_security_group     = "upstream_input.security_groups.access_security_group_id_prod"
+    front_door_security_group = upstream_input.security_groups.front_door_security_group_id_prod
+    access_security_group     = upstream_input.security_groups.access_security_group_id_prod
   }
 }
 
