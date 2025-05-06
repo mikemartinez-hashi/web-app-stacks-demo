@@ -33,9 +33,9 @@ variable "key_name" {
 # }
 
 variable "front_door_security_group" {
-  type = string
+  type = list(string)
 }
 
 variable "access_security_group" {
-  type = string
+  type = list(string)
 }
