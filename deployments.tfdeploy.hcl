@@ -2,12 +2,6 @@ identity_token "aws" {
   audience = ["aws.workload.identity"]
 }
 
-upstream_input "security_groups" {
-  type   = "stack"
-  source = "app.terraform.io/Mikes_sandbox/Terraform Stacks/use1-network-stacks-demo"
-}
-
-
 deployment "dev" {
   inputs = {
     regions                   = ["us-east-1"]
@@ -24,6 +18,12 @@ deployment "dev" {
     access_security_group     = upstream_input.security_groups.access_security_group_id_dev
   }
 }
+
+upstream_input "security_groups" {
+  type   = "stack"
+  source = "app.terraform.io/Mikes_sandbox/Terraform Stacks/use1-network-stacks-demo"
+}
+
 
 # deployment "prod" {
 #   inputs = {
