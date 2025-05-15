@@ -39,3 +39,7 @@ variable "front_door_security_group" {
 variable "access_security_group" {
   type = string
 }
+
+variable "vpc_id" {
+  type = string
+}

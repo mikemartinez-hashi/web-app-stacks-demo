@@ -20,6 +20,7 @@ data "aws_ami" "amazon_linux_2" {
 
 # Create an EC2 Instance
 resource "aws_instance" "web_server_app" {
+  vpc_id        = var.vpc_id
   ami           = data.aws_ami.amazon_linux_2.id
   instance_type = var.instance_type
 

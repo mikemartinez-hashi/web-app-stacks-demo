@@ -51,6 +51,10 @@ variable "access_security_group" {
   type = string
 }
 
+variable "vpc_id" {
+  type = string
+}
+
 # HCP configuration
 // variable "HCP_CLIENT_ID" {
 //   type        = string
