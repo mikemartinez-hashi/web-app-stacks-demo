@@ -20,15 +20,14 @@ data "aws_ami" "amazon_linux_2" {
 
 # Create an EC2 Instance
 resource "aws_instance" "web_server_app" {
-  vpc_id        = var.vpc_id
   ami           = data.aws_ami.amazon_linux_2.id
   instance_type = var.instance_type
 
   key_name = var.key_name
   # security_groups = var.security_groups
   vpc_security_group_ids = [
-    var.front_door_security_group,
-    var.access_security_group
+    "${var.front_door_security_group}",
+    "${var.access_security_group}"
   ]
 
   tags = {
