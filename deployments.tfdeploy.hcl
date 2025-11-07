@@ -19,10 +19,10 @@ deployment "dev" {
   }
 }
 
-upstream_input "security_groups" {
-  type   = "stack"
-  source = "app.terraform.io/Mikes_sandbox/Terraform Stacks/use1-network-stacks-demo"
-}
+# upstream_input "security_groups" {
+#   type   = "stack"
+#   source = "app.terraform.io/Mikes_sandbox/Terraform Stacks/use1-network-stacks-demo"
+# }
 
 
 # deployment "prod" {
